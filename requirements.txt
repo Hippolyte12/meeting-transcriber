@@ -1,5 +1,21 @@
-faster-whisper>=1.0.0
-pyannote.audio>=3.1
-gradio>=4.0
-python-docx>=1.0
-torch>=2.0
+# Transcription
+faster-whisper==1.1.0
+
+# Diarisation
+pyannote.audio==3.3.2
+huggingface_hub>=0.33.5
+
+# Interface
+gradio>=6.0
+gradio-client>=1.0
+
+# Export
+python-docx==1.1.2
+
+# Deep learning
+torch==2.3.1
+torchaudio==2.3.1
+numpy<2.0
+
+# Résumé
+requests>=2.28.0

@@ -3,8 +3,9 @@ app.py
 Interface Gradio pour la transcription de réunions.
 Lancement : python app.py
 """
-
+     
 import os
+os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 import sys
 import tempfile
 from pathlib import Path
@@ -275,7 +276,7 @@ def check_ollama_status():
 
 # ─── Interface Gradio ─────────────────────────────────────────────────────────
 
-with gr.Blocks(title="Meeting Transcriber", theme=gr.themes.Soft()) as demo:
+with gr.Blocks(title="Meeting Transcriber") as demo:
 
     gr.Markdown("# Meeting Transcriber\nTranscription de réunions 100% locale")
 
@@ -419,4 +420,4 @@ with gr.Blocks(title="Meeting Transcriber", theme=gr.themes.Soft()) as demo:
     )
 
 if __name__ == "__main__":
-    demo.launch()
+    demo.launch(theme=gr.themes.Soft(), server_name="0.0.0.0")
