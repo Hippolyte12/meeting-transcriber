@@ -1,0 +1,35 @@
+﻿# Environnement virtuel
+.venv/
+
+# Python embarqué (lourd, inutile sur GitHub)
+python_embed/
+
+# Modèles téléchargés
+models/
+
+# Fichiers générés
+output/
+
+# Cache Python
+__pycache__/
+*.pyc
+
+# Variables d'environnement
+.env
+
+# Marqueur d'installation
+.installed
+
+# Fichiers temporaires audio/vidéo
+*.wav
+*.mp3
+*.mp4
+*.mkv
+*.avi
+*.mov
+
+# Inno Setup output
+Output/
+
+# Fichier get-pip téléchargé
+get-pip.py
