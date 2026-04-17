@@ -34,7 +34,8 @@ def main():
     # 1. Mettre à jour pip
     print("[1/3] Mise à jour de pip...")
     result = subprocess.run(
-        [str(PYTHON_EXE), "-I", "-m", "pip", "install", "--upgrade", "pip"],
+        [str(PYTHON_EXE), "-I", "-m", "pip", "install", "--upgrade", "pip",
+         "--target", str(PYTHON_DIR / "Lib" / "site-packages")],
         capture_output=False
     )
     if result.returncode != 0:
@@ -44,7 +45,8 @@ def main():
     print("[2/3] Installation des dépendances (torch, whisper, gradio...)")
     print("       Cela peut prendre plusieurs minutes...")
     result = subprocess.run(
-        [str(PYTHON_EXE), "-I", "-m", "pip", "install", "-r", str(REQUIREMENTS)],
+        [str(PYTHON_EXE), "-I", "-m", "pip", "install", "-r", str(REQUIREMENTS),
+         "--target", str(PYTHON_DIR / "Lib" / "site-packages")],
         capture_output=False
     )
     if result.returncode != 0:

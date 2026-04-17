@@ -3,9 +3,9 @@
 
 [Setup]
 AppName=Meeting Transcriber
-AppVersion=1.0
+AppVersion=1.0.2
 AppPublisher=Meeting Transcriber
-DefaultDirName={autopf}\MeetingTranscriber
+DefaultDirName={localappdata}\MeetingTranscriber
 DefaultGroupName=Meeting Transcriber
 OutputDir=installer_output
 OutputBaseFilename=MeetingTranscriber_Setup
@@ -21,9 +21,10 @@ Source: "python_embed\*"; DestDir: "{app}\python_embed"; Flags: ignoreversion re
 ; Fichiers de l'application
 Source: "app.py"; DestDir: "{app}"; Flags: ignoreversion
 Source: "setup_first_run.py"; DestDir: "{app}"; Flags: ignoreversion
+Source: "updater.py"; DestDir: "{app}"; Flags: ignoreversion
+Source: "version.txt"; DestDir: "{app}"; Flags: ignoreversion
 Source: "MeetingTranscriber.bat"; DestDir: "{app}"; Flags: ignoreversion
 Source: "requirements.txt"; DestDir: "{app}"; Flags: ignoreversion
-
 ; Pipeline
 Source: "pipeline\*"; DestDir: "{app}\pipeline"; Flags: ignoreversion recursesubdirs
 

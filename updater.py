@@ -27,10 +27,9 @@ UPDATE_TARGETS = [
 
 
 def get_local_version() -> str:
-    """Retourne la version locale depuis version.txt."""
     if not VERSION_FILE.exists():
         return "0.0.0"
-    return VERSION_FILE.read_text().strip()
+    return VERSION_FILE.read_text(encoding="utf-8-sig").strip()
 
 
 def get_remote_version() -> tuple[str, str] | None:

@@ -32,7 +32,7 @@ echo http://127.0.0.1:7860
 echo.
 echo Ne fermez pas cette fenetre pendant l'utilisation.
 echo.
-
-python_embed\python.exe app.py
+start "" /B cmd /C "timeout /t 4 /nobreak >nul && start http://127.0.0.1:7860"
+python_embed\python.exe -I app.py
 
 pause
